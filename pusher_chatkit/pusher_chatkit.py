@@ -56,7 +56,7 @@ class PusherChatKit(object):
 
         token = jwt.encode(claims, split_key[1])
 
-        return {"token": token.decode("utf-8"), "expires_in": 24 * 60 * 60}
+        return {"access_token": token.decode("utf-8"), "expires_in": 24 * 60 * 60}
 
     def authenticate_user(self, user_id):
         """
